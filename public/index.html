@@ -6,7 +6,7 @@
     <style>
         body{margin:40px auto;
              max-width:1400px;
-             line-height:1.3;
+             line-height:1.1;
              font-size:18px;
              font-family: Tahoma, Verdana, Geneva, sans-serif;
              color:#444;
@@ -27,8 +27,25 @@
             padding: 4px; /* Adds padding inside cells */
             text-align: left; /* Aligns text to the left */
         }
+        #bowling td {
+            padding: 2px;
+            text-align: center;
+            font-size: smaller;
+        }
+        #bowling td:nth-child(1) {
+            padding-left: 4px;
+            text-align: left;
+            font-size: inherit ;
+        }
+        #bowling td:nth-child(n+22):nth-child(-n+27) {
+            padding: 4px;
+            font-size: inherit ;
+        }
 
-        h1,h2,h3{line-height:1.2}
+        hr {margin-block-start: 0;
+            margin-block-end: 0;
+            }
+
         em {color: red; font-style: normal; }
     </style>
 
@@ -36,14 +53,19 @@
 </head>
 <body>
 <b>
-<table>
+<table id="heading">
     <tr>
-        <td>MATCH BETWEEN: Northern Districts vs Glenelg</td>
+        <td>MATCH BETWEEN: Northern Districts vs Glenelg
+            <button style="float: right;">Select Game...</button>
+        </td>
         <td colspan="2">PLAYED AT: Glenelg Oval</td>
         <td colspan="2">COMPETITION: 2 day</td>
     </tr>
     <tr>
-        <td>1st INNINGS OF: Northern Districts</td>
+        <td><button><<</button>
+            1st INNINGS OF: Northern Districts
+            <button>>></button>
+        </td>
         <td>TOSS WON BY: Glenelg</td>
         <td>DATE: 25/10/2025</td>
         <td>GRADE: B</td>
@@ -52,7 +74,7 @@
 </table>
 </b>
 
-<table>
+<table id="batting">
     <thead>
     <tr>
         <td>Batter</td>
@@ -141,8 +163,10 @@
         <td>9</td>
     </tr>
     <tr>
-        <td colspan="2" rowspan="5" style="padding: 0px; border: 0px;">
-            <table>
+        <td colspan="3" rowspan="5" style="padding-left: 0px; 
+                                           padding-right: 10px; 
+                                           border: 0px;">
+            <table id="fow">
             <thead>
             <tr>
                 <td>Fall of Wickets</td>
@@ -188,27 +212,27 @@
             </tbody>
             </table>
         </td>
-        <td style="border: 0px;"></td>
+         <!-- <td style="border: 0px;"></td>. -->
         <td>BYES</td>
         <td>1</td>
     </tr>
     <tr>
-        <td style="border: 0px;"></td>
+         <!-- <td style="border: 0px;"></td>. -->
         <td>LEG BYES</td>
         <td>3</td>
     </tr>
     <tr>
-        <td style="border: 0px;"></td>
+         <!-- <td style="border: 0px;"></td>. -->
         <td>WIDES</td>
         <td>1</td>
     </tr>
     <tr>
-        <td style="border: 0px;"></td>
+         <!-- <td style="border: 0px;"></td>. -->
         <td>NO BALLS</td>
         <td>10</td>
     </tr>
     <tr>
-        <td style="border: 0px;"></td>
+         <!-- <td style="border: 0px;"></td>. -->
         <td>TOTAL SCORE</td>
         <td>10/232</td>
     </tr>
@@ -216,7 +240,7 @@
 </table>
 
 
-<table>
+<table id="bowling">
     <thead><tr>
         <td>Bowler</td>
         <td>1</td>
@@ -249,21 +273,21 @@
     <tbody>
     <tr>
         <td>M Stewart</td>
-        <td>:1.<em>4</em>.<br>[0-5]</td>
-        <td>:<em>4</em>:.<br>[0-9]</td>
-        <td>:.2<em>X</em>.<br>[1-11]</td>
-        <td><em>X::.</em><br>[2-11]</td>
-        <td><em>4</em>:<em>N4</em>12<em>X</em><br>[3-23]</td>
-        <td>::.<em>4</em><br>[3-27]</td>
-        <td>.1<em>N</em>:3.<br>[3-32]</td>
-        <td>.<em>NN4</em>:.<em>L</em>.<br>[3-38]</td>
-        <td>2.1:.<br>[3-41]</td>
-        <td>::2.<br>[3-43]</td>
-        <td><em>:::</em><br>[3-43]</td>
-        <td><em>4</em>.1:.<br>[3-48]</td>
-        <td>:2<em>4</em>12<br>[3-57]</td>
-        <td>.1:.2<br>[3-60]</td>
-        <td>:.1<em>L2</em>.<br>[3-61]</td>
+        <td>:1.<em>4</em>.<hr>0-5</td>
+        <td>:<em>4</em>:.<hr>0-9</td>
+        <td>:.2<em>X</em>.<hr>1-11</td>
+        <td><em>X::.</em><hr>2-11</td>
+        <td><em>4</em>:<em>N4</em>12<em>X</em><hr>3-23</td>
+        <td>::.<em>4</em><hr>3-27</td>
+        <td>.1<em>N</em>:3.<hr>3-32</td>
+        <td>.<em>NN4</em>:.<em>L</em>.<hr>3-38</td>
+        <td>2.1:.<hr>3-41</td>
+        <td>::2.<hr>3-43</td>
+        <td><em>:::</em><hr>3-43</td>
+        <td><em>4</em>.1:.<hr>3-48</td>
+        <td>:2<em>4</em>12<hr>3-57</td>
+        <td>.1:.2<hr>3-60</td>
+        <td>:.1<em>L2</em>.<hr>3-61</td>
         <td></td>
         <td></td>
         <td></td>
@@ -278,22 +302,22 @@
     </tr>
     <tr>
         <td>M. Waanders</td>
-        <td>::.<em>4</em><br>[0-4]</td>
-        <td>2::.<br>[0-6]</td>
-        <td>.21.<em>N</em>:<br>[0-10]</td>
-        <td>.<em>4</em>1:1<br>[0-16]</td>
-        <td>::12<br>[0-19]</td>
-        <td><em>:::</em><br>[0-19]</td>
-        <td><em>:::</em><br>[0-19]</td>
-        <td>:.<em>4</em>:<br>[0-23]</td>
-        <td><em>X</em>11:.<br>[1-25]</td>
-        <td>::.<em>4</em><br>[1-29]</td>
-        <td>::2<em>X</em><br>[2-31]</td>
-        <td><em>:::</em><br>[2-31]</td>
-        <td><em>:::</em><br>[2-31]</td>
-        <td>.2:.3<br>[2-36]</td>
-        <td><em>4X</em>::<br>[3-40]</td>
-        <td>.<em>44</em>:.<br>[3-48]</td>
+        <td>::.<em>4</em><hr>0-4</td>
+        <td>2::.<hr>0-6</td>
+        <td>.21.<em>N</em>:<hr>0-10</td>
+        <td>.<em>4</em>1:1<hr>0-16</td>
+        <td>::12<hr>0-19</td>
+        <td><em>:::</em><hr>0-19</td>
+        <td><em>:::</em><hr>0-19</td>
+        <td>:.<em>4</em>:<hr>0-23</td>
+        <td><em>X</em>11:.<hr>1-25</td>
+        <td>::.<em>4</em><hr>1-29</td>
+        <td>::2<em>X</em><hr>2-31</td>
+        <td><em>:::</em><hr>2-31</td>
+        <td><em>:::</em><hr>2-31</td>
+        <td>.2:.3<hr>2-36</td>
+        <td><em>4X</em>::<hr>3-40</td>
+        <td>.<em>44</em>:.<hr>3-48</td>
         <td></td>
         <td></td>
         <td></td>
@@ -307,26 +331,26 @@
     </tr>
     <tr>
         <td>J. Higgins</td>
-        <td>2::<em>X</em><br>[1-2]</td>
-        <td>:.2:<br>[1-4]</td>
-        <td>:1:1<br>[1-6]</td>
-        <td>.<em>4</em>1:1<br>[1-12]</td>
-        <td>:2:2<br>[1-16]</td>
-        <td>.1:.1<br>[1-18]</td>
-        <td><em>X::.</em><br>[2-18]</td>
-        <td>22::<br>[2-22]</td>
-        <td>3:.1.<br>[2-26]</td>
-        <td>.1::<br>[2-27]</td>
-        <td><em>:::</em><br>[2-27]</td>
-        <td>:<em>4</em>:<em>4</em><br>[2-35]</td>
-        <td><em>:.B:</em><br>[2-35]</td>
-        <td><em>:::</em><br>[2-35]</td>
-        <td>:1:.<br>[2-36]</td>
-        <td>::.1<br>[2-37]</td>
-        <td>11:.2<br>[2-41]</td>
-        <td><em>:::</em><br>[2-41]</td>
-        <td>::11<br>[2-43]</td>
-        <td><em>:::</em><br>[2-43]</td>
+        <td>2::<em>X</em><hr>1-2</td>
+        <td>:.2:<hr>1-4</td>
+        <td>:1:1<hr>1-6</td>
+        <td>.<em>4</em>1:1<hr>1-12</td>
+        <td>:2:2<hr>1-16</td>
+        <td>.1:.1<hr>1-18</td>
+        <td><em>X::.</em><hr>2-18</td>
+        <td>22::<hr>2-22</td>
+        <td>3:.1.<hr>2-26</td>
+        <td>.1::<hr>2-27</td>
+        <td><em>:::</em><hr>2-27</td>
+        <td>:<em>4</em>:<em>4</em><hr>2-35</td>
+        <td><em>:.B:</em><hr>2-35</td>
+        <td><em>:::</em><hr>2-35</td>
+        <td>:1:.<hr>2-36</td>
+        <td>::.1<hr>2-37</td>
+        <td>11:.2<hr>2-41</td>
+        <td><em>:::</em><hr>2-41</td>
+        <td>::11<hr>2-43</td>
+        <td><em>:::</em><hr>2-43</td>
         <td>...</td>
         <td>...</td>
         <td>...</td>
@@ -336,12 +360,12 @@
     </tr>
     <tr>
         <td>J. Higgins (cont)</td>
-        <td>:12:<br>[2-46]</td>
-        <td>::.3<br>[2-49]</td>
-        <td>.1:<em>4</em>.<br>[2-54]</td>
-        <td>.1::<br>[2-55]</td>
-        <td>:.11<em>4</em><br>[2-61]</td>
-        <td>:.<em>W44</em>.<br>[2-70]</td>
+        <td>:12:<hr>2-46</td>
+        <td>::.3<hr>2-49</td>
+        <td>.1:<em>4</em>.<hr>2-54</td>
+        <td>.1::<hr>2-55</td>
+        <td>:.11<em>4</em><hr>2-61</td>
+        <td>:.<em>W44</em>.<hr>2-70</td>
         <td></td>
         <td></td>
         <td></td>
@@ -365,17 +389,17 @@
     </tr>
     <tr>
         <td>C. Alsop</td>
-        <td>.13:.<br>[0-4]</td>
-        <td>311:.<br>[0-9]</td>
-        <td><em>:::</em><br>[0-9]</td>
-        <td>.1::<br>[0-10]</td>
-        <td><em>:::</em><br>[0-10]</td>
-        <td><em>:::</em><br>[0-10]</td>
-        <td>1.1:.<br>[0-12]</td>
-        <td>.<em>N</em>.2:.<br>[0-15]</td>
-        <td>::<em>N</em>2.<br>[0-18]</td>
-        <td><em>:::</em><br>[0-18]</td>
-        <td><em>:::</em><br>[0-18]</td>
+        <td>.13:.<hr>0-4</td>
+        <td>311:.<hr>0-9</td>
+        <td><em>:::</em><hr>0-9</td>
+        <td>.1::<hr>0-10</td>
+        <td><em>:::</em><hr>0-10</td>
+        <td><em>:::</em><hr>0-10</td>
+        <td>1.1:.<hr>0-12</td>
+        <td>.<em>N</em>.2:.<hr>0-15</td>
+        <td>::<em>N</em>2.<hr>0-18</td>
+        <td><em>:::</em><hr>0-18</td>
+        <td><em>:::</em><hr>0-18</td>
         <td></td>
         <td></td>
         <td></td>
@@ -394,26 +418,26 @@
     </tr>
     <tr>
         <td>B. Roberts</td>
-        <td><em>:::</em><br>[0-0]</td>
-        <td>:1:.<br>[0-1]</td>
-        <td>1:<em>X</em>:<br>[1-2]</td>
-        <td>:.2:<br>[1-4]</td>
-        <td><em>:::</em><br>[1-4]</td>
-        <td>:.<em>N</em>.1.<br>[1-6]</td>
-        <td><em>:::</em><br>[1-6]</td>
-        <td><em>4</em>::.<br>[1-10]</td>
-        <td>:.2<em>N</em>:<br>[1-13]</td>
-        <td>1::.<br>[1-14]</td>
-        <td>.1::<br>[1-15]</td>
-        <td>:11:<br>[1-17]</td>
-        <td>.1::<br>[1-18]</td>
-        <td><em>:::</em><br>[1-18]</td>
-        <td><em>:::</em><br>[1-18]</td>
-        <td><em>:::</em><br>[1-18]</td>
-        <td>1:.1.<br>[1-20]</td>
-        <td><em>:::</em><br>[1-20]</td>
-        <td>:.<em>4</em>:<br>[1-24]</td>
-        <td>:1:.<br>[1-25]</td>
+        <td><em>:::</em><hr>0-0</td>
+        <td>:1:.<hr>0-1</td>
+        <td>1:<em>X</em>:<hr>1-2</td>
+        <td>:.2:<hr>1-4</td>
+        <td><em>:::</em><hr>1-4</td>
+        <td>:.<em>N</em>.1.<hr>1-6</td>
+        <td><em>:::</em><hr>1-6</td>
+        <td><em>4</em>::.<hr>1-10</td>
+        <td>:.2<em>N</em>:<hr>1-13</td>
+        <td>1::.<hr>1-14</td>
+        <td>.1::<hr>1-15</td>
+        <td>:11:<hr>1-17</td>
+        <td>.1::<hr>1-18</td>
+        <td><em>:::</em><hr>1-18</td>
+        <td><em>:::</em><hr>1-18</td>
+        <td><em>:::</em><hr>1-18</td>
+        <td>1:.1.<hr>1-20</td>
+        <td><em>:::</em><hr>1-20</td>
+        <td>:.<em>4</em>:<hr>1-24</td>
+        <td>:1:.<hr>1-25</td>
         <td>20</td>
         <td>7</td>
         <td></td>
@@ -423,10 +447,10 @@
     </tr>
     <tr>
         <td>K. Singh</td>
-        <td>11:<em>N</em>1.<br>[0-4]</td>
-        <td>:1:.<br>[0-5]</td>
-        <td>1::.<br>[0-6]</td>
-        <td><em>:::</em><br>[0-6]</td>
+        <td>11:<em>N</em>1.<hr>0-4</td>
+        <td>:1:.<hr>0-5</td>
+        <td>1::.<hr>0-6</td>
+        <td><em>:::</em><hr>0-6</td>
         <td></td>
         <td></td>
         <td></td>
